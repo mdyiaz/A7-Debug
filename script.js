@@ -132,9 +132,11 @@ document.getElementById('starts').addEventListener("click", function () {
   setInterval(() => {
     const currentTime = new Date().getTime();
     const timeSpent = (currentTime - startTime) / 1000;
+    const timeSpents = timeSpent.toFixed(0);
 
 
-    document.getElementById("show-time").innerHTML = `${startTime ? timeSpent : 0} seconds`;
+
+    document.getElementById("show-time").innerHTML = `${startTime ? timeSpents : 0} seconds`;
   }, 1000);
 
 
